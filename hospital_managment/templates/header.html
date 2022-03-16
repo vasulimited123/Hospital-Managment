@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hospital Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-info">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Hospital Management</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li class="topnav-right"><input class="form-control mr-sm-2" type="text" placeholder="Search"></li>
+      <li><button class="btn btn-success" type="submit">Search</button></li>
+      <li><a href="{% url 'login' %}">Login </a></li>
+      <li><a href="{% url 'signup' %}">Sign up</a></li>
+
+    </ul>
+    
+  </div>
+ 
+</nav>
+  
+<div class="col text-center">
+  {% if messages %}
+      <ul class="alert alert-success">
+      {% for message in messages %}
+          <li {% if message.tags %} class="{{ message.tags }} text-danger"{% endif %}>{{ message }}</li>
+      {% endfor %}
+      </ul>
+  {% endif %}
+
+</div>
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% include "header.html" %}
+
+<form action="" method="POST" >
+  {% csrf_token %} 
+  <div class="col-md-4">
+
+    <div >
+      <lable>Profile Photo</lable>
+      <img src="/media/{{patient.image}}"" alt="Profile Photo" width="200" height="200">
+    </div>
+
+    <div >
+      <lable>Profile Photo</lable>
+      <input type="file" class="form-control"  placeholder="Image" name="image" disabled>
+    </div>
+
+    <div >
+      <lable>First Name</lable>
+      <input type="text" class="form-control"  placeholder="First Name" name="first_name" value={{patient.user.first_name}}>
+    </div>
+
+    <div >
+      <lable>Last Name</lable>
+      <input type="text" class="form-control"  placeholder="User Name" name="last_name" value="{{patient.user.last_name}}">
+    </div>
+
+    <div >
+      <lable>Email</lable>
+      <input type="Email" class="form-control"  placeholder="Email" name="email" value="{{patient.user.email}}">
+    </div>
+
+    <div >
+      <lable>Zip Code</lable>
+      <input type="text" class="form-control"  placeholder="Zip Code" name="zip_code" value="{{patient.zip_code}}">
+    </div>
+
+    <div >
+      <lable>Phone</lable>
+      <input type="text" class="form-control" placeholder="Phone" name="phone" value="{{patient.phone}}">
+    </div>
+
+    <div >
+      <lable>Address</lable>
+      <input type="text" class="form-control" placeholder="Address" name="address" value="{{patient.address}}">
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Update</button>
+    <button  class="btn  mt-3" ><a href="{% url 'patientDetails' %}" >Back To List</a></button>
+    <button  class="btn  mt-3" ><a  href="{% url 'delete_patient' patient.user.id %}">Delete</a></button>
+    
+  </div>
+  
+</form>
+

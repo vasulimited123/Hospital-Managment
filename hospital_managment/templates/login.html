@@ -1,0 +1,42 @@
+
+{% include "header.html" %}
+<div class="container">
+  <h2>Login </h2>
+
+  
+  
+  <form action="" method="POST" >
+    {% csrf_token %}
+    <div class="col-md-4">
+
+      <hr style="height:1px;background-color:black">
+      
+      <div >
+        <lable> <b> Enter Your Email </b> </lable><br><br>
+        <input type="text" class="form-control"  placeholder="Enter Your Email" name="email">
+      </div>
+      
+      <hr style="height:1px;background-color:black">
+
+      <div >
+        <lable> <b> Password </b> </lable><br><br>
+        <input type="password" class="form-control" placeholder="Enter password" name="psd">
+      </div>
+
+      <hr style="height:1px;background-color:black">
+
+      <button type="submit" class="btn btn-primary mt-3">Login</button>
+
+      <hr style="height:1px;background-color:black">
+
+      <p> do not Have Account Press Hear To <a href="{% url 'signup' %}"> Sign Up </a></p>
+
+      <hr style="height:1px;background-color:black">
+
+      <p> Forgot Password <a href="{% url 'forgot_password' %}"> Click Hear </a></p>
+    </div>
+   
+  </form>
+</div>
+
+

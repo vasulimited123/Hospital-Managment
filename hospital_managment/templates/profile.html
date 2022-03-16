@@ -1,0 +1,47 @@
+{% include "header.html" %}
+
+<form action="" method="POST" >
+  {% csrf_token %} 
+  <div class="col-md-4">
+
+    
+
+    <div >
+      <lable>First Name</lable>
+      <input type="text" class="form-control"  placeholder="First Name" name="first_name">
+    </div>
+
+    <div >
+      <lable>Last Name</lable>
+      <input type="text" class="form-control"  placeholder="User Name" name="last_name">
+    </div>
+
+    <div >
+      <lable>Email</lable>
+      <input type="Email" class="form-control"  placeholder="Email" name="email">
+    </div>
+
+    <div >
+      <lable>User Name</lable>
+      <input type="text" class="form-control"  placeholder="User Name" name="user_name">
+    </div>
+
+    <div >
+        <lable>Phone</lable>
+        <input type="text" class="form-control"  placeholder="User Name" name="phone">
+    </div>
+
+    <div >
+        <lable>Address</lable>
+        <input type="text" class="form-control"  placeholder="User Name" name="address">
+    </div>
+
+    <div >
+        <lable>Zip Code</lable>
+        <input type="text" class="form-control"  placeholder="User Name" name="zip_code">
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Update</button>
+  </div>
+  
+</form>

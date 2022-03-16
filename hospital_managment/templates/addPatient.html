@@ -1,0 +1,78 @@
+{% include "header.html" %}
+
+<div class="container">
+
+<h1>Add New Patient</h1>
+
+<form action="" method="POST" enctype="multipart/form-data" >
+  {% csrf_token %} 
+  <div class="col-md-4">
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>First Name</lable>
+      <input type="text" class="form-control"  placeholder="First Name" name="first_name">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>Last Name</lable>
+      <input type="text" class="form-control"  placeholder="User Name" name="last_name">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>User Name</lable>
+      <input type="text" class="form-control"  placeholder="User Name" name="user_name">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>Email</lable>
+      <input type="Email" class="form-control"  placeholder="Email" name="email">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+        <lable>Phone</lable>
+        <input type="text" class="form-control"  placeholder="Phone Number" name="phone">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+        <lable>Address</lable>
+        <input type="text" class="form-control"  placeholder="Address" name="address">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+        <lable>Zip Code</lable>
+        <input type="text" class="form-control"  placeholder="Zip Code" name="zip_code">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+        <lable>Upload Photo</lable>
+        <input type="file" class="form-control"  placeholder="Image" name="image">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <button type="submit" class="btn btn-primary mt-3">Create</button> 
+
+    <button class="btn btn-secondary mt-3"> <a href="{% url 'patientDetails' %}"> Cancel </a></button>
+
+    <hr style="height:1px;background-color:black">
+
+  </div>
+  
+</form>
+</div>

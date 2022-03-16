@@ -1,0 +1,63 @@
+{% include "header.html" %}
+<div class="container">
+<h1>Sign Up </h1>
+
+<form action="" method="POST" >
+  {% csrf_token %} 
+  <div class="col-md-4">
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>First Name</lable>
+      <input type="text" class="form-control"  placeholder="First Name" name="first_name">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>Last Name</lable>
+      <input type="text" class="form-control"  placeholder="User Name" name="last_name">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>Email</lable>
+      <input type="Email" class="form-control"  placeholder="Email" name="email">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>User Name</lable>
+      <input type="text" class="form-control"  placeholder="User Name" name="user_name">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>Password</lable>
+      <input type="password" class="form-control" placeholder="Enter password" name="pds">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <div >
+      <lable>Confirm Password</lable>
+      <input type="password" class="form-control" placeholder="Re-Enter The Password" name="Cpds">
+    </div>
+
+    <hr style="height:1px;background-color:black">
+
+    <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
+
+    <hr style="height:1px;background-color:black">
+
+    <p> Have Already Account Press Hear To <a href="{% url 'login' %}"> Login </a></p>
+
+    <hr style="height:1px;background-color:black">
+  </div>
+  
+</form>
+</div>

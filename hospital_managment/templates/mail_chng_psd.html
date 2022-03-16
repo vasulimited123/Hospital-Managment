@@ -1,0 +1,20 @@
+{% include "header.html" %}
+<div class="container">
+  <h2>Change Password </h2><br><br>
+  
+  <form action="" method="POST" >
+    {% csrf_token %}
+    
+
+      <div >
+        <lable> <b> New Password </b> </lable> <br><br>
+        <input type="password" class="form-control" placeholder="New Password" name="newPassword" required>
+      </div><br><br>
+
+      <button type="submit" class="btn btn-primary mt-3">Update Password</button> 
+      
+     
+    </div>
+   
+  </form>
+</div>

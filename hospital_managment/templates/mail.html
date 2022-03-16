@@ -1,0 +1,13 @@
+{% include "header.html" %}
+<form method="POST" >
+    {% csrf_token %} 
+    Enter your mail
+    <input type="email" placeholder="email" name="mail">
+    <button type="submit" value="Send" id="btnSubmit" > Send </button>
+</form>
+<script>
+     $("#btnSubmit").on("click", function(e){
+          $(this).closest("form")[0].submit();
+          $(this).prop('disabled',true)
+     });
+</script>
